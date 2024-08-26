@@ -27,6 +27,7 @@ detector = HTM.handDetector(detectionCon=0.7)#change conf so that detection is s
 
 def set_volume(volume_percentage):
     with pulsectl.Pulse('volume-control') as pulse:
+        #set to 0 for default sink
         sink = pulse.sink_list()[3]  # Get the headphones sink
         volume = volume_percentage / 100.0  # Convert percentage to a float between 0 and 1
         pulse.volume_set_all_chans(sink, volume)
@@ -54,7 +55,7 @@ while True:
 
         length = math.hypot(x2-x1, y2-y1) #length of the line
         print(length)
-        
+
         #set the range of the volume
         volume_percentage = np.interp(length, [50, 380], [0, 100])
         set_volume(volume_percentage)
