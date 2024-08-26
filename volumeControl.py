@@ -32,8 +32,7 @@ def set_volume(volume_percentage):
         volume = volume_percentage / 100.0  # Convert percentage to a float between 0 and 1
         pulse.volume_set_all_chans(sink, volume)
 
-# Initialize volume settings
-set_volume(50)  # Set initial volume to 50%
+
 
 
 
@@ -62,7 +61,7 @@ while True:
 
         if length < 50:
             cv2.circle(img, (cx,cy), 10, (255,255,255), cv2.FILLED)
-        
+      
 
 
 
@@ -74,3 +73,8 @@ while True:
 
     cv2.imshow("Image", img)
     cv2.waitKey(1)
+    if cv2.getWindowProperty("Image", cv2.WND_PROP_VISIBLE) < 1:
+            break
+    
+cap.release()
+cv2.destroyAllWindows()
