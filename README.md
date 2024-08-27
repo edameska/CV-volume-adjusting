@@ -13,6 +13,7 @@ The script captures video from your webcam, detects your hand, and uses the dist
 - Python 3.x
 - OpenCV (`cv2`)
 - NumPy
+- MediaPipe
 - PulseAudio (`pulsectl` Python library) or Python Core Audio Windows Library (`pycaw` Python library)
 
 ## Installation
