@@ -13,7 +13,7 @@ The script captures video from your webcam, detects your hand, and uses the dist
 - Python 3.x
 - OpenCV (`cv2`)
 - NumPy
-- PulseAudio (`pulsectl` Python library)
+- PulseAudio (`pulsectl` Python library) or Python Core Audio Windows Library (`pycaw` Python library)
 
 ## Installation
 
@@ -22,7 +22,12 @@ The script captures video from your webcam, detects your hand, and uses the dist
    ```bash
    pip install opencv-python numpy pulsectl
    ```
-2. **Ensure your webcam is connected and functioning properly**
+   or
+
+     ```bash
+   pip install opencv-python numpy pycaw
+   ```
+3. **Ensure your webcam is connected and functioning properly**
 
 ## Usage
 1.**Run the script using python**
