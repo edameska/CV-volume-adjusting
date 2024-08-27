@@ -20,12 +20,12 @@ The script captures video from your webcam, detects your hand, and uses the dist
 1. **Install Python dependencies**:
 
    ```bash
-   pip install opencv-python numpy pulsectl
+   pip install opencv-python numpy pulsectl mediapipe
    ```
    or
 
      ```bash
-   pip install opencv-python numpy pycaw
+   pip install opencv-python numpy pycaw mediapipe
    ```
 3. **Ensure your webcam is connected and functioning properly**
 
